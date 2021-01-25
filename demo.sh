@@ -2,6 +2,7 @@
 echo "hello world"
 
 echo 'lets learn bash'
-echo 'added via branch'
+echo 'change in master'
+
 
 
