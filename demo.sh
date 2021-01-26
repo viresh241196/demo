@@ -1,10 +1,14 @@
 #!/bin/bash -x
-attendance=$((RANDOM%2))
-if [ $attendance -eq 0 ]
+random=$((RANDOM%2))
+full=1
+absent=0
+if [ $random = $full ];
 then
-	echo "absent"
+        rateperhr=20
+        emphr=8
+        salary=$(( $rateperhr * $emphr))
 else
-	echo "present"
+        salary=0
 fi
 
 
