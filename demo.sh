@@ -7,6 +7,7 @@ workingday=0
 workinghr=0
 max_working_day=20
 max_working_hr=50
+da_counter=1
 function cal_work_hr () {
         case $1 in
                 $isFullTime )
@@ -28,11 +29,13 @@ do
 	empHrs="$( cal_work_hr $random )"
 	workinghr=$((workinghr + empHrs))
 	salary=$((salary + empHrs*empRatePerHr))
+	daily_wage[ ((day_counter++))]=$salary
 	if [ $random -ne 0 ]
 	then
 		((workingday++))
 	fi
 done
 echo $salary
+echo ${daily_wage[@]}
 
 
