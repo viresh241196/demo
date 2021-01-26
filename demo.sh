@@ -1,19 +1,22 @@
 #!/bin/bash -x
 random=$((RANDOM%3))
-full=2
-part=1
+isFullTime=2
+isPartTime=1
 absent=0
-if [ $random = $full ];
-then
-        rateperhr=20
-        emphr=8
-        salary=$(( $rateperhr * $emphr))
-elif [ $random = $part ];
-then
-        ratePerHr=20
-        empHr=4
-        salary=$(( $ratePerHr * $empHr))
-else
-        salary=0
-fi
+empRatePerHr=20;
+
+case $random in
+                $isFullTime )
+                        empHrs=8
+                        ;;
+                $isPartTime )
+                        empHrs=4
+                        ;;
+                *)
+                        empHrs=0
+                        ;;
+esac
+salary=$((empHrs*empRatePerHr))
+echo $salary
+
 
