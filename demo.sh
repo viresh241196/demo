@@ -37,5 +37,5 @@ do
 done
 echo $salary
 echo ${daily_wage[@]}
-
+echo ${!daily_wage[@]}
 
