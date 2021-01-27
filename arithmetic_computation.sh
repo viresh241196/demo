@@ -12,3 +12,9 @@ store[1]=$operation1
 store[2]=$operation2
 store[3]=$operation3
 store[4]=$operation4
+for (( i=1;i<=4 ;i++ ))
+do 
+	array[i]=${store[$i]}
+	
+done
+echo ${array[@]}
