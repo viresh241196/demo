@@ -5,4 +5,3 @@ read -p 'enter third number ' c
 
 operation1=$((a + b * c))
 operation2=$((a*b +c))
-operation3=$((c+a/b))
