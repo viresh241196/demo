@@ -18,3 +18,17 @@ do
 	
 done
 echo ${array[@]}
+echo ${#array[@]}
+for (( i=1;i<=${#array[@]};i++))
+do
+	for (( j=(($i+1));j<=${#array[@]};j++))
+	do
+		if [ ${array[$i]} -lt ${array[$j]} ]
+		then
+			temp=${array[$j]}
+			array[$j]=${array[$i]}
+			array[$i]=$temp
+		fi
+	done
+done
+echo ${array[@]}
