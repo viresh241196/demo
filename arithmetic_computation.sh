@@ -23,7 +23,7 @@ for (( i=1;i<=${#array[@]};i++))
 do
 	for (( j=(($i+1));j<=${#array[@]};j++))
 	do
-		if [ ${array[$i]} -lt ${array[$j]} ]
+		if [ ${array[$i]} -gt ${array[$j]} ]
 		then
 			temp=${array[$j]}
 			array[$j]=${array[$i]}
