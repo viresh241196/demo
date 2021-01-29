@@ -10,6 +10,12 @@ do
 	else
 		((count_of_tails++))
 	fi
+	if [ $count_of_heads -eq $count_of_tails ]
+	then
+		(( count_of_heads-5 ))
+		(( count_of_heads-5 ))
+	fi
+
 done
 if [ $count_of_heads -eq $count_of_tails ]
 then
